@@ -5,8 +5,10 @@ let tray;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 800,
+    width: 400,
     height: 600,
+    frame: false,
+    alwaysOnTop: true,
     webPreferences: {
       nodeIntegration: true,
     },
@@ -19,6 +21,17 @@ function createWindow() {
     mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show();
   });
 
+  mainWindow.on("show", () => {
+    //* Can't get right position on linux for now
+    //* https://github.com/electron/electron/issues/15003
+    const trayBounds = tray.getBounds();
+    let y = 0;
+    let x = 0;
+
+    mainWindow.setPosition(x, y);
+  });
+
+  mainWindow.setAutoHideMenuBar(true);
   mainWindow.loadFile("app/index.html");
 }
 
