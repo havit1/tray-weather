@@ -31,6 +31,10 @@ function createWindow() {
     mainWindow.setPosition(x, y);
   });
 
+  mainWindow.on("blur", () => {
+    mainWindow.hide();
+  });
+
   mainWindow.setAutoHideMenuBar(true);
   mainWindow.loadFile("app/index.html");
 }
