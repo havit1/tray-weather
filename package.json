@@ -1,21 +1,23 @@
 {
-  "name": "my-electron-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app/main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^11.0.3"
-  },
-  "dependencies": {
-    "axios": "^0.21.0",
-    "bulma": "^0.9.1",
-    "vue": "^2.6.12"
-  }
+	"name": "my-electron-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app/main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "electron ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"electron": "^11.0.3"
+	},
+	"dependencies": {
+		"axios": "^0.21.0",
+		"bulma": "^0.9.1",
+		"dayjs": "^1.9.7",
+		"dotenv": "^8.2.0",
+		"vue": "^2.6.12"
+	}
 }
